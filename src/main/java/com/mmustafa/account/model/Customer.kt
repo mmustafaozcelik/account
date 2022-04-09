@@ -1,8 +1,6 @@
 package com.mmustafa.account.model
 
 import org.hibernate.annotations.GenericGenerator
-import java.math.BigDecimal
-import java.time.LocalDateTime
 import javax.persistence.*
 
 
@@ -20,7 +18,7 @@ class Customer (
         val accounts: Set<Account>
 
         )
-
+{
         override fun equals(other: Any?): Boolean {
                 if (this === other) return true
                 if (javaClass != other?.javaClass) return false
