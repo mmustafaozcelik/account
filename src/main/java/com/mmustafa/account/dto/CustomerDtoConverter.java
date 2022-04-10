@@ -2,7 +2,6 @@ package com.mmustafa.account.dto;
 
 import com.mmustafa.account.model.Customer;
 import org.springframework.stereotype.Component;
-
 import java.util.stream.Collectors;
 
 @Component
