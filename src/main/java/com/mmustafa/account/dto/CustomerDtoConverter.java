@@ -17,14 +17,17 @@ public class CustomerDtoConverter {
         if (from == null){
             return new AccountCustomerDto("","" ,"" );
         }
-        return new AccountCustomerDto(from.getId(), from.getName(), from.getSurName());
+        return new AccountCustomerDto(from.getId(), from.getName(), from.getSurname());
     }
     public CustomerDto convertToCustomerDto(Customer from){
         return  new CustomerDto(
                 from.getId(),
                 from.getName(),
-                from.getSurName(),
-                from.getAccounts().stream().map(converter::convert).collect(Collectors.toSet())
+                from.getSurname(),
+                from.getAccounts()
+                        .stream()
+                        .map(converter::convert)
+                        .collect(Collectors.toSet())
         );
     }
 }
