@@ -10,4 +10,4 @@ RUN ./mvnw package
 FROM openjdk:11
 WORKDIR account
 COPY --from=build target/*.jar account.jar
-ENTRYPOINT ["java", "-jar", "accountjar"]
+ENTRYPOINT ["java", "-jar", "account.jar"]
